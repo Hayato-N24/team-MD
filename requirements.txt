@@ -1,4 +1,4 @@
-djnago
+django
 gunicorn
 psycopg2
 pathlib
