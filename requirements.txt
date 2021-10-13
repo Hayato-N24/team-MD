@@ -2,6 +2,5 @@ django
 gunicorn
 psycopg2
 pathlib
-picle
 sklearn
 MeCab
