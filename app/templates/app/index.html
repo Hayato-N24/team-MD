@@ -1,12 +1,6 @@
 {% extends 'app/base.html' %}
 {% block content %}
 <div class="container">
-    {% if result %}
-        <div class="alert alert-success">
-            {{ result }}
-
-        </div>
-    {% endif %}
     <div class="form-wrapper">
         <form action="{% url 'check' %}" method="post">
             {% csrf_token %}

@@ -19,7 +19,6 @@ model = pickle.load(open(model_file, "rb"))
 
 # テキストがスパムかどうか判定する --- (※4)
 def checkTweet(text):
-    print(text)
     # テキストを単語IDのリストに変換し単語の頻出頻度を調べる
     zw = np.zeros(word_dic['__id'])
     count = 0

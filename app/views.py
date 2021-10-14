@@ -23,4 +23,4 @@ def check(request):
         if formText.is_valid():
             params['text'] = formText.cleaned_data['text']
     params['result'] = checkTweet(params['text'])
-    return render(request, 'app/index.html',params)
+    return render(request, 'app/base.html',params)

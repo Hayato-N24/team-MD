@@ -3,4 +3,5 @@ gunicorn
 psycopg2
 pathlib
 sklearn
-MeCab
+mecab-python3
+django-environ

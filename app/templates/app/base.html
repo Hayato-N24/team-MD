@@ -29,6 +29,15 @@
         </div>
     </nav>
     <!-- end Navber-->
+    {% if result %}
+        <div class="alert alert-success text-center">
+            {{ result }}
+            <br>
+            <br>
+            <a class="btn btn-light" href="{% url 'index' %}">戻る</a>
+
+        </div>
+    {% endif %}
 
     {% block content %}
     {% endblock %}
