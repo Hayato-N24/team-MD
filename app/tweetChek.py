@@ -26,7 +26,7 @@ def checkTweet(text):
     # 単語毎の回数を加算 --- (※5)
     for line in s.split("\n"):
         if line == "EOS": break
-        org =  line.split(",")[6]# 単語の原型
+        org =  line.split(",")[0]# 単語の原型
         if org in word_dic:
             id = word_dic[org]
             zw[id] += 1
