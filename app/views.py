@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .form import InputForm
-from .tweetChek import checkTweet
+from .tweetCheck import checkTweet
 
 
 
