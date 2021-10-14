@@ -29,7 +29,7 @@
         </div>
     </nav>
     <!-- end Navber-->
-    {% if result %}
+    {% if result == 'OK' %}
         <div class="alert alert-success text-center">
             {{ result }}
             <br>
@@ -37,6 +37,14 @@
             <a class="btn btn-light" href="{% url 'index' %}">戻る</a>
 
         </div>
+    {% elif result == 'OUT' %}
+    <div class="alert alert-danger text-center">
+        {{ result }}
+        <br>
+        <br>
+        <a class="btn btn-light" href="{% url 'index' %}">戻る</a>
+
+    </div>
     {% endif %}
 
     {% block content %}

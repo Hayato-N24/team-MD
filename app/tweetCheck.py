@@ -13,7 +13,7 @@ label_names = ['OK', 'OUT']
 data = pickle.load(open(data_file, "rb"))
 word_dic = data[2]
 # MeCabの準備
-tagger = MeCab.Tagger()
+tagger = MeCab.Tagger("-Ochasen")
 # 学習済みモデルを読み出す --- (※3)
 model = pickle.load(open(model_file, "rb"))
 
@@ -27,7 +27,7 @@ def checkTweet(text):
     for line in s.split("\n"):
         print(line)
         if line == "EOS": break
-        org =  line.split(",")[6]# 単語の原型
+        org =  line.split("\t")[2]# 単語の原型
         print(org)
         if org in word_dic:
             id = word_dic[org]
