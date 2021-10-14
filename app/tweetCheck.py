@@ -25,8 +25,10 @@ def checkTweet(text):
     s = tagger.parse(text)
     # 単語毎の回数を加算 --- (※5)
     for line in s.split("\n"):
+        print(line)
         if line == "EOS": break
         org =  line.split(",")[6]# 単語の原型
+        print(org)
         if org in word_dic:
             id = word_dic[org]
             zw[id] += 1
